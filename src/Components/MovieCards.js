@@ -1,6 +1,8 @@
 import React from 'react';
 import  movieData from '../data/movies.json';
+import '../index.css';
 // import {webpack} from 'Webpack';
+
 
 export function MovieCards() {
 
