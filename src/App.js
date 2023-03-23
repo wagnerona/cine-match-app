@@ -1,17 +1,16 @@
-import React from 'react';
 import './App.css';
-// import {Routes, Route} from 'react-router-dom';
-import Header from './Components/Header';
-import { MovieCards } from './Components/MovieCards';
+import Categories from './pages/Categories';
+// import { Routes, Route } from 'react-router-dom'
 
 function App() {
   return (
     <>
-    <h1>hello App</h1>
-    <Header />
+    <div className="App">
+      Hello
+    </div>
+    <Categories />
     <MovieCards />
-   
-     </>
+    </>
   );
 }
 
