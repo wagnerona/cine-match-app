@@ -20,3 +20,6 @@ export const fetchData = async (Genre, Language, Year) => {
 //   const genre = genreList.find(item => item.name.toLowerCase() === userAnswer.toLowerCase());
 //   return genre ? genre.id : null;
 // }
+
+
+

@@ -17,26 +17,28 @@ const Categories = () => {
     };
 
     return (
-        <div>
-            <h2>Movie types</h2>
-            <form onSubmit={handleSubmit}>
-                <label>
-                    Genre:
-                    <input type="text" value={Genre} onChange={(e) => setGenre(e.target.value)} />
-                </label>
-                <br />
-                <label>
-                    Language:
-                    <input type="text" value={Language} onChange={(e) => setLanguage(e.target.value)} />
-                </label>
-                <br />
-                <label>
-                    Year:
-                    <input type="text" value={Year} onChange={(e) => setYear(e.target.value)} />
-                </label>
-                <br />
-                <button type="submit">Submit</button>
-            </form>
+        <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
+            <div>
+                <h2>Movie types</h2>
+                <form onSubmit={handleSubmit}>
+                    <label>
+                        Genre:
+                        <input className='bg-neutral-300' type="text" value={Genre} onChange={(e) => setGenre(e.target.value)} />
+                    </label>
+                    <br />
+                    <label>
+                        Language:
+                        <input className='bg-neutral-300' type="text" value={Language} onChange={(e) => setLanguage(e.target.value)} />
+                    </label>
+                    <br />
+                    <label>
+                        Year:
+                        <input className='bg-neutral-300' type="text" value={Year} onChange={(e) => setYear(e.target.value)} />
+                    </label>
+                    <br />
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
         </div>
     );
 };

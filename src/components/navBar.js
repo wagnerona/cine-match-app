@@ -1,6 +1,7 @@
 import React from "react";
 
-function NavTabs(props) {
+function NavBar(props) {
+
   return (
     <ul className="nav nav-tabs">
       <li className="nav-item">
@@ -35,4 +36,6 @@ function NavTabs(props) {
   );
 }
 
-export default NavTabs;
+
+export default NavBar;
+
