@@ -1,8 +1,16 @@
 import React from "react";
+import logoImage from './pages/images/logo2.png';
+
 
 function NavTabs(props) {
   return (
+    <nav>
+        <div className="logo">
+          <img src={logoImage} alt="Logo"/>
+        </div>
+
     <ul className="nav nav-tabs">
+     
       <li className="nav-item">
         <a
           href="#home"
@@ -12,6 +20,8 @@ function NavTabs(props) {
           Home
         </a>
       </li>
+
+
       <li className="nav-item">
         <a
           href="#favouriteMovie"
@@ -21,6 +31,8 @@ function NavTabs(props) {
           Favourite Movie
         </a>
       </li>
+
+
       <li className="nav-item">
         <a
           href="#recommendation"
@@ -32,6 +44,7 @@ function NavTabs(props) {
       </li>
      
     </ul>
+    </nav>
   );
 }
 
