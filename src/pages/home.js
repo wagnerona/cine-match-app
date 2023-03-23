@@ -1,5 +1,7 @@
 import React from 'react';
+
 import Navbar from './Navbar';
+
 import logoImage from './pages/images/logo2.png';
 
 const Home = () => {
@@ -16,7 +18,6 @@ const Home = () => {
       </div>
     );
   }
-
 
 
 export default Home
