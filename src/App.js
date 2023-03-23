@@ -1,11 +1,9 @@
-import './App.css';
-// import { Routes, Route } from 'react-router-dom'
+import React from "react";
+import Home from "./home";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      Hello
-    </div>
+    <Home/>
   );
 }
 
