@@ -1,23 +1,22 @@
 import React from 'react';
-import logoImage from './pages/images/logo2.png'
-
+import Navbar from './pages/components/Navbar';
+import logoImage from './pages/images/logo2.png';
 
 const Home = () => {
   return (
-   <div>
-    <body>
-
-    <img className="logo" src={logoImage} alt="background"/>
-    
-    
-  
-    </body>
-
-
+    <div className="homepage">
+        <Navbar />
+        <div className="logo-background">
+          <img src={logoImage} alt="Logo"/>
+          <button className="center-button">Let's go!</button>
           
-    </div>
-    
-  )
-}
+          
+          
+        </div>
+      </div>
+    );
+  }
+
+
 
 export default Home
