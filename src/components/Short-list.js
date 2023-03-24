@@ -1,8 +1,8 @@
 import React from "react";
-import { NameList } from './name-list';
+import { MoviePicker } from './MoviePicker.js';
 
-export function ShortList({ names, shortList, setShortList }) {
-    const shortListedNames = names.filter(entry => 
+export function ShortList({ movies, shortList, setShortList }) {
+    const shortListedMovies = movies.filter(entry => 
         shortList.includes(entry.id) );
 
     function removeFromShortList(id) {
@@ -10,13 +10,14 @@ export function ShortList({ names, shortList, setShortList }) {
 
     }
 
-    const hasNames = shortListedNames.length > 0
+    const hasMovies = shortListedMovies.length > 0
     return (
     <div className="short-list">
-        <h2>{ hasNames ? "Your shortlist: " : "Click on a name to shortlist it" }</h2>
-        { hasNames && (
-           <NameList nameList={shortListedNames}
-        onItemClick={removeFromShortList} /> 
+        <h2>{ hasMovies ? "Your shortlist: " : "Click on a movie to shortlist it" }</h2>
+        { hasMovies && (
+           <MovieList 
+                MoviesList={shortListedMovies}
+                onItemClick={removeFromShortList} /> 
         )}
         <hr />
         
