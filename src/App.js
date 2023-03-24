@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import Categories from './pages/Categories';
-// import { Routes, Route } from 'react-router-dom'
 import { MovieList } from './components/MovieList.js';
 import MovieSwiper from './components/MovieSwiper.js';
 import Navbar from './components/navBar';
@@ -12,6 +11,8 @@ import Home from './pages/home';
 function App() {
   return (
     <>
+    <Navbar />
+    <Home />
     <Categories />
     <Short-list />
     <MovieSwiper />
@@ -32,3 +33,5 @@ export default App;
         <Route path='/categories' element={<Categories />} />
         <Route path='/movie-gallery' element={<MovieCards />} />
       </Routes> */}
+
+      
