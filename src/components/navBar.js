@@ -1,41 +1,28 @@
-import React from "react";
+import React from 'react'
+import { Link } from 'react-router-dom'
+import Logo from '../images/logo2.png'
 
-function NavBar(props) {
+const Navbar = () => {
+    return (
+        <header className='fixed w-full h-[80px] flex justify-between items-center px-5 sm:px-20 bg-neutral-800 text-gray-300 z-40'>
 
-  return (
-    <ul className="nav nav-tabs">
-      <li className="nav-item">
-        <a
-          href="#home"
-          onClick={() => props.handlePageChange("Home")}
-          className={props.currentPage === "Home" ? "nav-link active" : "nav-link"}
-        >
-          Home
-        </a>
-      </li>
-      <li className="nav-item">
-        <a
-          href="#favouriteMovie"
-          onClick={() => props.handlePageChange("favouriteMovie")}
-          className={props.currentPage === "Favourite Moive" ? "nav-link active" : "nav-link"}
-        >
-          Favourite Movie
-        </a>
-      </li>
-      <li className="nav-item">
-        <a
-          href="#recommendation"
-          onClick={() => props.handlePageChange("recommendation")}
-          className={props.currentPage === "recommendation" ? "nav-link active" : "nav-link"}
-        >
-          Recommendation
-        </a>
-      </li>
-     
-    </ul>
-  );
+            <div>
+                <img src={Logo} alt='Logo' style={{ width: '80px' }} />
+            </div>
+
+            {/* full navbar */}
+          
+            <ul className='flex'>
+                <li className='px-5'>
+                    <Link to='/home'>Home</Link>
+                </li>
+                <li className='pl-5'>
+                    <Link to='/movie-gallery'>My movies</Link>
+                </li>
+            </ul>
+        </header>
+    )
 }
 
-
-export default NavBar;
+export default Navbar
 

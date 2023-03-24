@@ -7,7 +7,7 @@ import '../index.css';
 export function MovieCards() {
 
     return (
-        <div className="movie-gallery">
+        <div name="movie-gallery" className="movie-gallery mx-10">
           {movieData.map((movie) => (
             <div className="movie" key={movie.id}>
               <img src={movie.imageUrl} alt={movie.title} />
@@ -18,5 +18,5 @@ export function MovieCards() {
           ))}
         </div>
       );
-    ;
+    
 }
