@@ -1,24 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
-import Categories from './pages/Categories';
+import Form from './pages/Form';
 import { MovieList } from './components/MovieList.js';
 import MovieSwiper from './components/MovieSwiper.js';
 import Navbar from './components/navBar';
 import { Router, Routes, Route } from 'react-router-dom'
 import Home from './pages/home';
+import movieId from "./data/movie-ids.json"
 
 
 function App() {
+
+  const [movies, setMovies] = useState([]);
+  const [formData, setFormData] = useState({ Genre: "", Language: "", Year: "" });
+
+
+
+
+  // Handle form submission
+  const handleSubmit = (data) => {
+    // Find the genre ID based on the selected genre name
+    const genreID = movieId.find(
+      (element) => element.name.toLowerCase() === data.genre.toLowerCase()
+    ).id;
+
+    // Make API call with form data and genre ID
+    fetch(
+      `https://api.themoviedb.org/3/discover/movie?api_key=9ecb2171ed5e0635071b94b5d388556c&language=${data.language}&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&year=${data.year}&with_genres=${genreID}&with_watch_monetization_types=flatrate`
+    )
+      .then((response) => response.json())
+      .then((data) => setMovies(data.results))
+      .catch((error) => console.log(error));
+    // Store form data in state
+    setFormData(data);
+  };
+
   return (
     <>
-    <Navbar />
-    <Home />
-    <Categories />
-    <Short-list />
-    <MovieSwiper />
-    <hr />
-    <MovieList />
-    
+      <Navbar />
+      <Home />
+      <Form onSubmit={handleSubmit} />
+      <Short-list />
+      <MovieSwiper />
+      <hr />
+      <MovieList movies={movies} />
+
     </>
   );
 }
@@ -34,4 +60,4 @@ export default App;
         <Route path='/movie-gallery' element={<MovieCards />} />
       </Routes> */}
 
-      
+
