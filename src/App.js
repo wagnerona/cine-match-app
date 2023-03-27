@@ -4,16 +4,18 @@ import Form from './pages/Form';
 import { MovieList } from './components/MovieList.js';
 import MovieSwiper from './components/MovieSwiper.js';
 import Navbar from './components/navBar';
-import { Router, Routes, Route } from 'react-router-dom'
+import { Router, Route, Routes } from 'react-router-dom'
 import Home from './pages/home';
 import movieId from "./data/movie-ids.json"
+import MovieSearch from './components/MovieSearch';
 
 
 function App() {
 
   const [movies, setMovies] = useState([]);
   const [formData, setFormData] = useState({ Genre: "", Language: "", Year: "" });
-
+  // add
+  const [selectedMovie, setSelectedMovie] = useState(null);
 
 
 
@@ -34,6 +36,10 @@ function App() {
     // Store form data in state
     setFormData(data);
   };
+// add
+  const handleMovieSelect = (movie) => {
+    setSelectedMovie(movie);
+  };
 
   return (
     <>
@@ -43,8 +49,16 @@ function App() {
       <Short-list />
       <MovieSwiper />
       <hr />
-      <MovieList movies={movies} />
-
+      {/* add */}
+      {selectedMovie ? (
+        <MovieSearch
+          movie={selectedMovie}
+          onClose={() => setSelectedMovie(null)}
+        />
+      ) : (
+      //  <MovieList movies={movies} /> 
+       <MovieList movies={movies} onSelect={handleMovieSelect} />
+       )}
     </>
   );
 }

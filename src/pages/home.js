@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 const Home = () => {
   return (
 
-
+     
     <section name="home" className="bg-gray-900 text-white">
       <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
         <div className="mx-auto max-w-3xl text-center">
@@ -17,20 +17,29 @@ const Home = () => {
             Tell us what type of movies you're looking for and we'll handle the rest
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Link
+             <Link
               className="block w-full rounded border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
               to="/categories"
             >
               Lets go !
             </Link>
+           
+ 
+
+
           </div>
         </div>
       </div>
     </section>
 
+//  <footer className="bg-gray-800 text-gray-300 py-4 text-center">
+// <div className="container mx-auto">
+//   <p>&copy; 2023 My Movie Website. All rights reserved.</p>
+// </div>
+// </footer> 
 
 
-  )
+  );
 }
 
 
