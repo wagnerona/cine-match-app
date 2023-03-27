@@ -13,8 +13,12 @@ function App() {
 
   const [movies, setMovies] = useState([]);
   const [formData, setFormData] = useState({ Genre: "", Language: "", Year: "" });
+  const [shortListMovie, setShortListMovie] = useState([]);
 
-
+  //handle shortlist submit
+  const handleMovieSubmit = (chosenMovie) => {
+    setShortListMovie(chosenMovie)
+  };
 
 
   // Handle form submission
@@ -30,7 +34,7 @@ function App() {
     }
     // Make API call with form data and genre ID
     fetch(
-      `https://api.themoviedb.org/3/discover/movie?api_key=9ecb2171ed5e0635071b94b5d388556c&language=${data.language}&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&year=${data.year}&with_genres=${genreID}&with_watch_monetization_types=flatrate`
+      `https://api.themoviedb.org/3/discover/movie?api_key=9ecb2171ed5e0635071b94b5d388556c&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&year=${data.year}&with_genres=${genreID}&with_original_language=${data.language}&with_watch_monetization_types=flatrate`
     )
       .then((response) => response.json())
       .then((data) => setMovies(data.results))
@@ -45,9 +49,10 @@ function App() {
       <Home />
       <Form onSubmit={handleSubmit} />
       <Short-list />
-      <MovieSwiper />
+      <MovieSwiper 
+      movies={movies} onMovieSubmit={handleMovieSubmit} />
       <hr />
-      <MovieList movies={movies} />
+      <MovieList movies={shortListMovie} />
 
     </>
   );

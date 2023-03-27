@@ -50,10 +50,10 @@ const Form = ({ onSubmit }) => {
                     </label>
                     <br />
                     <label className="font-medium text-lg pt-3">
-                        Language:
+                        Original Language:
                         <input
                             className='mt-2 w-full rounded-lg h-10 mb-2 block border-2 border-600 placeholder:font-normal px-2'
-                            placeholder="In short format 'en' = english"
+                            placeholder="Search ' fr ' for French films"
                             type="text"
                             name="language"
                             value={formData.l}

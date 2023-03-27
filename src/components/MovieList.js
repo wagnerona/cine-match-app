@@ -11,7 +11,7 @@ export function MovieList({ movies }) {
         <div className="movie" key={movie.id}>
           <img
             src={`http://image.tmdb.org/t/p/w185${movie.poster_path}`}
-            alt="movie"
+            alt={movie.title}
           />
           <div className="overlay">
             <h3>{movie.title}</h3>
