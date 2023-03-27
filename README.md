@@ -1,6 +1,24 @@
-# Getting Started with Create React App
+<h1 align="center">🎬 Cine Match App 🎬</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+
+This is a Front-End React Website that gives the user search a specific movie depending on different categories such as multiple genres like crime, comedy, drama, horror, romantic, war, action and many more genre, year and language.
+
+## User Story
+
+```text
+ AS A Movieholic
+ I WANT to get Movie reccomendations based on some categories
+ SO THAT I can have a list of to-watch movies for the weekend or a movienight 
+```
+
+## Installation
+
+## Technologies
+
+## Usage
+
+## Mock Up
 
 ## Available Scripts
 
