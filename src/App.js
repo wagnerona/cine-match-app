@@ -20,10 +20,14 @@ function App() {
   // Handle form submission
   const handleSubmit = (data) => {
     // Find the genre ID based on the selected genre name
-    const genreID = movieId.find(
-      (element) => element.name.toLowerCase() === data.genre.toLowerCase()
-    ).id;
-
+    let genreID;
+    if (data.genre) {
+      genreID = movieId.find(
+        (element) => element.name.toLowerCase() === data.genre.toLowerCase()
+      ).id;
+    } else {
+      genreID = "";
+    }
     // Make API call with form data and genre ID
     fetch(
       `https://api.themoviedb.org/3/discover/movie?api_key=9ecb2171ed5e0635071b94b5d388556c&language=${data.language}&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&year=${data.year}&with_genres=${genreID}&with_watch_monetization_types=flatrate`
