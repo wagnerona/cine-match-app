@@ -53,7 +53,7 @@ const Form = ({ onSubmit }) => {
                         Original Language:
                         <input
                             className='mt-2 w-full rounded-lg h-10 mb-2 block border-2 border-600 placeholder:font-normal px-2'
-                            placeholder="Search ' fr ' for French films"
+                            placeholder="Spanish, French, German ..."
                             type="text"
                             name="language"
                             value={formData.l}

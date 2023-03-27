@@ -7,6 +7,7 @@ import Navbar from './components/navBar';
 import { Router, Routes, Route } from 'react-router-dom'
 import Home from './pages/home';
 import movieId from "./data/movie-ids.json"
+import languageShort from "./data/languages.json"
 
 
 function App() {
@@ -32,9 +33,19 @@ function App() {
     } else {
       genreID = "";
     }
+
+    let langShort;
+    if (data.language) {
+      langShort = languageShort.find(
+        (e) => e.language.toLowerCase() === data.language.toLowerCase()
+      ).short;
+    } else {
+      langShort = "";
+    }
+
     // Make API call with form data and genre ID
     fetch(
-      `https://api.themoviedb.org/3/discover/movie?api_key=9ecb2171ed5e0635071b94b5d388556c&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&year=${data.year}&with_genres=${genreID}&with_original_language=${data.language}&with_watch_monetization_types=flatrate`
+      `https://api.themoviedb.org/3/discover/movie?api_key=9ecb2171ed5e0635071b94b5d388556c&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&year=${data.year}&with_genres=${genreID}&with_original_language=${langShort}&with_watch_monetization_types=flatrate`
     )
       .then((response) => response.json())
       .then((data) => setMovies(data.results))
