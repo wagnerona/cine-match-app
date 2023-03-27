@@ -6,18 +6,20 @@ import '../index.css';
 
 export function MovieList({ movies }) {
   return (
-    <div className="movie-gallery">
-      {movies.map((movie) => (
-        <div className="movie" key={movie.id}>
-          <img
-            src={`http://image.tmdb.org/t/p/w185${movie.poster_path}`}
-            alt={movie.title}
-          />
-          <div className="overlay">
-            <h3>{movie.title}</h3>
+    <div name="picks" className='w-full md:h-screen text-[#212529]'>
+      <div className="movie-gallery pt-20">
+        {movies.map((movie) => (
+          <div className="movie" key={movie.id}>
+            <img
+              src={`http://image.tmdb.org/t/p/w185${movie.poster_path}`}
+              alt={movie.title}
+            />
+            <div className="overlay">
+              <h3>{movie.title}</h3>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }

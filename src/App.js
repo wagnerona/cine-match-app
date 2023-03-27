@@ -73,11 +73,3 @@ export default App;
 
 
 
-{/* <Navbar />
-      <Routes>
-        <Route path='/home' element={<Home />} />
-        <Route path='/categories' element={<Categories />} />
-        <Route path='/movie-gallery' element={<MovieCards />} />
-      </Routes> */}
-
-
