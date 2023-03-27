@@ -7,7 +7,6 @@ import Navbar from './components/navBar';
 import { Router, Route, Routes } from 'react-router-dom'
 import Home from './pages/home';
 import movieId from "./data/movie-ids.json"
-//import MovieSearch from './components/MovieSearch';
 import MovieCard from './components/MovieCard';
 
 

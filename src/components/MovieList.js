@@ -21,12 +21,6 @@ import '../index.css';
 //   );
 //   }
   
-  
-   
-
-
-
-
 export function MovieList({ movies }) {
   return (
    
