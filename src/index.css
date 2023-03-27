@@ -170,7 +170,7 @@ body {
       }
       
   
-      .movie-card .leftButton,
+      /* .movie-card .leftButton,
       .movie-card .rightButton {
         position: absolute;
         top: 50%;
@@ -197,7 +197,7 @@ body {
         border: 1px solid red;
         color: red;   
         background-color: #f5f5f5;
-      }
+      } */
         
 
       
@@ -217,17 +217,16 @@ body {
       }
 
       .movie-details {
-        background: hwb(195 5% 76%);
-        color: #fff;
+        background: hwb(195 79% 12%);
         font-size: 1.5rem;
         padding: 1rem;
         border-radius: 0.5rem;
-        /* box-shadow: 0px 2px 4px rgba(98, 100, 222, 0.2); */
+         /* box-shadow: 0px 2px 4px rgba(98, 100, 222, 0.2); */ 
         transition: all 0.3s ease-in-out;
       }
       
       .movie-details:hover {
-        background: #fff;
+        background: rgb(220, 241, 247);
        
        box-shadow: 0px 4px 6px rgba(198, 199, 208, 0.3); 
         transform: translateY(-0.5rem);

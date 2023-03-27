@@ -7,7 +7,8 @@ import Navbar from './components/navBar';
 import { Router, Route, Routes } from 'react-router-dom'
 import Home from './pages/home';
 import movieId from "./data/movie-ids.json"
-import MovieSearch from './components/MovieSearch';
+//import MovieSearch from './components/MovieSearch';
+import MovieCard from './components/MovieCard';
 
 
 function App() {
@@ -47,11 +48,12 @@ function App() {
       <Home />
       <Form onSubmit={handleSubmit} />
       <Short-list />
-      <MovieSwiper />
+      <MovieSwiper movies={movies}/>
+      
       <hr />
       {/* add */}
       {selectedMovie ? (
-        <MovieSearch
+        <MovieCard
           movie={selectedMovie}
           onClose={() => setSelectedMovie(null)}
         />
