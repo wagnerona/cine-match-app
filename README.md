@@ -46,7 +46,7 @@ Tested through deploying it on Netlify and through compiling it through React.
 ### Questions
 Contact the developers if you have any questions below:
  
-    [Wagner](mailto:) 
-    [Joanna](jo.stillawake@gmail.com) 
-    [Sinthiya](mailto:sinthiya.islamjuly35@gmail.com) 
-    [Fiona](mailto:) 
+[Wagner](mailto:) 
+[Joanna](jo.stillawake@gmail.com) 
+[Sinthiya](mailto:sinthiya.islamjuly35@gmail.com) 
+[Fiona](mailto:) 
