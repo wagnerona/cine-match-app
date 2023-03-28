@@ -9,6 +9,7 @@ function MovieSwiper({ movies, onMovieSubmit }) {
   const [shortlist, setShortlist] = useState([]);
 
   const handleShortList = () => {
+    
     // event.preventDefault();
     // updating the shortlist data
     // setChosenMovie([...shortlist, chosenMovie]);
