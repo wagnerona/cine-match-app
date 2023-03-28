@@ -58,7 +58,7 @@ function App() {
     <>
       <Navbar />
       <Routes>
-        <Route path='/home' element={<Home />} />
+        <Route path='/' element={<Home />} />
         <Route path='/form' element={<Form onSubmit={handleSubmit} />} />
         {/* <Route path='/home' element={<Short-list />} /> */}
         <Route path='/picks' element={<MovieSwiper movies={movies} onMovieSubmit={handleMovieSubmit} />} />

@@ -14,7 +14,7 @@ const Navbar = () => {
           
             <ul className='flex'>
                 <li className='px-5'>
-                    <Link to='/home'>Home</Link>
+                    <Link to='/'>Home</Link>
                 </li>
                 <li className='pl-5'>
                     <Link to='/my-movies'>My movies</Link>
