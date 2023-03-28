@@ -1,23 +1,23 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Logo from '../images/logo2.png'
+import Logo from '../images/Logo3.png'
 
 const Navbar = () => {
     return (
-        <header className='fixed w-full h-[80px] flex justify-between items-center px-5 sm:px-20 bg-neutral-800 text-gray-300 z-40'>
+        <header className='fixed w-full h-[65px] flex justify-between items-center px-5 sm:px-20 bg-neutral-800 text-gray-300 z-40'>
 
             <div>
-                <img src={Logo} alt='Logo' style={{ width: '80px' }} />
+                <img src={Logo} alt='Logo' style={{ width: '65px' }} />
             </div>
 
             {/* full navbar */}
           
             <ul className='flex'>
                 <li className='px-5'>
-                    <Link to='/home'>Home</Link>
+                    <Link to='/'>Home</Link>
                 </li>
                 <li className='pl-5'>
-                    <Link to='/movie-gallery'>My movies</Link>
+                    <Link to='/my-movies'>My movies</Link>
                 </li>
             </ul>
         </header>
