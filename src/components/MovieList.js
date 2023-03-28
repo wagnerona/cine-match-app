@@ -9,10 +9,10 @@ console.log(getShortList);
 export function MovieList({ movies }) {
   return (
     <>   
-  
+
     <div name="picks" className='w-full md:h-screen text-[#212529]'>
       <div className="movie-gallery pt-20">
-       
+
         {getShortList.map((shorty) => (
           <div className="movie" key={shorty.id}>
             <img

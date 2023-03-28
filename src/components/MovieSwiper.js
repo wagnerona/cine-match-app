@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import MovieCard from "./MovieCard.js";
+// import MoviePicker from "./MoviePicker.js";
 import { Link } from "react-router-dom";
 
 
@@ -9,13 +11,11 @@ function MovieSwiper({ movies, onMovieSubmit }) {
   const [shortlist, setShortlist] = useState([]);
 
   const handleShortList = () => {
-    
     // event.preventDefault();
     // updating the shortlist data
     // setChosenMovie([...shortlist, chosenMovie]);
     onMovieSubmit(shortlist);
     console.log(shortlist);
-   
     const jsonShortlist = JSON.stringify(shortlist);
     const storedShortlist = localStorage.setItem('movie', jsonShortlist);
      // Check if movieStorageData is not null and parse JSON string
@@ -44,21 +44,26 @@ function MovieSwiper({ movies, onMovieSubmit }) {
 
   const currentMovie = movies[currentMovieIndex];
 
-
   return (
     <div name="picks" className='w-full md:h-screen text-[#212529]'>
       <div className="mx-auto px-8 flex flex-col justify-center h-full">
         <h1>Swipe right to keep or left to dismiss the movie</h1>
         <div className="movie-card">
-          <img src={`http://image.tmdb.org/t/p/w185${currentMovie.poster_path}`} alt={currentMovie.title} />
+        <div className="movie-details">
           <h2>{currentMovie.title}</h2>
-          <p>{currentMovie.description}</p>
+
+         
+          <img className="mx-auto w-72 h-128" src={`http://image.tmdb.org/t/p/w185${currentMovie.poster_path}`} alt={currentMovie.title} />
+         
+          <p className="movie-detail">{currentMovie.overview}</p>
+          <p className="movie-detail"><strong>Release Date:</strong> {currentMovie.release_date}</p>
+          <p className=" movie-detail"><strong>Language:</strong> {currentMovie.original_language}</p>
+          <p className=" movie-detail"><strong>Rating:</strong> {currentMovie.vote_average}</p>
+
+           </div>
           <div className="swipe-buttons">
             <button className="leftButton" onClick={() => handleSwipe("left")}>Swipe left</button>
-            <button className="rightButton" onClick={() => {
-              handleSwipe("right");
-            }}>Swipe right</button>
-
+            <button className="rightButton" onClick={() =>  handleSwipe("right") }>Swipe right</button>
           </div>
           <div className="shortlist">
             <h3>Shortlist</h3>
