@@ -26,11 +26,11 @@ The movies you have swiped right on are kept in a shortlist so you can review th
     Enter up to three choices through which you can search for a movie you'd like to watch.
     This website uses React, Tailwind CSS, local storage. 
    
- ### Technologies
+### Technologies
     
-    `React UI`
+`React UI`
 
-    `Telwind CSS`
+`Telwind CSS`
 
 ### License
 
@@ -40,11 +40,11 @@ The movies you have swiped right on are kept in a shortlist so you can review th
 
 Tested through deploying it on Netlify and through compiling it through React.
 
-    ## Screenshots
+### Screenshots
 
-    ## Questions
-
-    Contact the developers if you have any questions below:
+    
+### Questions
+Contact the developers if you have any questions below:
  
     [Wagner](mailto:) 
     [Joanna](jo.stillawake@gmail.com) 
