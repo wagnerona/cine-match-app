@@ -15,7 +15,15 @@ function MovieSwiper({ movies, onMovieSubmit }) {
     // updating the shortlist data
     // setChosenMovie([...shortlist, chosenMovie]);
     onMovieSubmit(shortlist);
-    console.log(shortlist)
+    console.log(shortlist);
+    const jsonShortlist = JSON.stringify(shortlist);
+    const storedShortlist = localStorage.setItem('movie', jsonShortlist);
+     // Check if movieStorageData is not null and parse JSON string
+  const parsedStoredShortlist = storedShortlist ? JSON.parse(storedShortlist) : null;
+
+  // Check if parsedMovieStorageData is an array, if not, create an array with the single movie object
+  const movieArray = Array.isArray(parsedStoredShortlist) ? parsedStoredShortlist : [parsedStoredShortlist];
+    
 
   };
 
