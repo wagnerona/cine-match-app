@@ -10,6 +10,7 @@ import movieId from "./data/movie-ids.json"
 import languageShort from "./data/languages.json"
 
 
+
 function App() {
 
   const [movies, setMovies] = useState([]);
