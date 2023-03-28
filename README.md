@@ -1,14 +1,14 @@
  <h1 align="center">Cine Match</h1>
 
 
-* 1. [Description](##Description)
-* 2. [Installation](#Installation)
-* 3. [Usage](#Usage)
-* 4. [Configuration](#Configuration)
-* 5. [License](#License)
-* 6. [Tests](#Tests)
-* 7. [Screenshots] (#Screenshots)
-* 8. [Questions](##Questions)
+* [Description](##Description)
+* [Installation](#Installation)
+* [Usage](#Usage)
+* [Configuration](#Configuration)
+* [License](#License)
+* [Tests](#Tests)
+* [Screenshots] (##Screenshots)
+* 8[Questions](##Questions)
 
 ### Description 
 
@@ -46,7 +46,7 @@ Tested through deploying it on Netlify and through compiling it through React.
 ### Questions
 Contact the developers if you have any questions below:
 
-📧 [Wagner](mailto:) 
-[Joanna](jo.stillawake@gmail.com)
-[Sinthiya](mailto:sinthiya.islamjuly35@gmail.com) 
+📧 [Wagner](mailto:),
+[Joanna](jo.stillawake@gmail.com),
+[Sinthiya](mailto:sinthiya.islamjuly35@gmail.com), 
 [Fiona](mailto:) 📧
