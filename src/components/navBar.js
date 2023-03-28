@@ -17,7 +17,7 @@ const Navbar = () => {
                     <Link to='/home'>Home</Link>
                 </li>
                 <li className='pl-5'>
-                    <Link to='/movie-gallery'>My movies</Link>
+                    <Link to='/my-movies'>My movies</Link>
                 </li>
             </ul>
         </header>

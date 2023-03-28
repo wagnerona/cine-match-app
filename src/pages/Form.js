@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
-
+import { useNavigate } from "react-router-dom";
 
 
 
 const Form = ({ onSubmit }) => {
 
     const [formData, setFormData] = useState({ Genre: "", Language: "", Year: "" })
+    const navigate = useNavigate();
+
 
     const handleChange = (e) => {
 
@@ -17,7 +19,7 @@ const Form = ({ onSubmit }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         onSubmit(formData);
-        
+        navigate("/picks");
     }
 
     return (

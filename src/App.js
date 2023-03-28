@@ -17,8 +17,8 @@ function App() {
   const [shortListMovie, setShortListMovie] = useState([]);
 
   //handle shortlist submit
-  const handleMovieSubmit = (chosenMovie) => {
-    setShortListMovie(chosenMovie)
+  const handleMovieSubmit = (shortlist) => {
+    setShortListMovie(shortlist)
   };
 
 
@@ -57,14 +57,13 @@ function App() {
   return (
     <>
       <Navbar />
-      <Home />
-      <Form onSubmit={handleSubmit} />
-      <Short-list />
-      <MovieSwiper 
-      movies={movies} onMovieSubmit={handleMovieSubmit} />
-      <hr />
-      <MovieList movies={shortListMovie} />
-
+      <Routes>
+        <Route path='/home' element={<Home />} />
+        <Route path='/form' element={<Form onSubmit={handleSubmit} />} />
+        {/* <Route path='/home' element={<Short-list />} /> */}
+        <Route path='/picks' element={<MovieSwiper movies={movies} onMovieSubmit={handleMovieSubmit} />} />
+        <Route path='/my-movies' element={<MovieList movies={shortListMovie} />} />
+      </Routes>
     </>
   );
 }
