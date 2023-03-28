@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import MovieCard from "./MovieCard.js";
-// import MoviePicker from "./MoviePicker.js";
 import { Link } from "react-router-dom";
 
 
@@ -16,6 +14,7 @@ function MovieSwiper({ movies, onMovieSubmit }) {
     // setChosenMovie([...shortlist, chosenMovie]);
     onMovieSubmit(shortlist);
     console.log(shortlist);
+   
     const jsonShortlist = JSON.stringify(shortlist);
     const storedShortlist = localStorage.setItem('movie', jsonShortlist);
      // Check if movieStorageData is not null and parse JSON string
