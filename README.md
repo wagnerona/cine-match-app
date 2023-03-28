@@ -2,19 +2,22 @@
 
 
 * [Description](##Description)
+* [User-Story] (##User-Story)
 * [Installation](#Installation)
 * [Usage](#Usage)
 * [Configuration](#Configuration)
 * [License](#License)
 * [Tests](#Tests)
-* [Screenshots] (##Screenshots)
-* 8[Questions](##Questions)
+* [Screenshot] (##Screenshots)
+* [Questions](##Questions)
 
 ### Description 
 
 CineMatch is a website where you can find your perfect movie match. As a user, you visit the site and choose to search for movies by selecting between one and three    options. You can choose type of movie, year of relase and language. 
 Once you search by your choice(s) you are shown a list of movie options one by one. Just like with Tinder, you can swipe left to get rid of the choice or swipe right to keep your movie choice.
 The movies you have swiped right on are kept in a shortlist so you can review them. 
+
+### User-Story
 
 ### Installation
     
