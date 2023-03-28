@@ -39,7 +39,7 @@ The movies you have swiped right on are kept in a shortlist so you can review th
 
 [![License MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Tests
+### Tests
 
 Tested through deploying it on Netlify and through compiling it through React.
 
@@ -47,6 +47,7 @@ Tested through deploying it on Netlify and through compiling it through React.
 
     
 ### Questions
+
 Contact the developers if you have any questions below:
 
 📧 [Wagner](mailto:),
