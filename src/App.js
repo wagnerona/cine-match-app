@@ -16,8 +16,7 @@ function App() {
   const [formData, setFormData] = useState({ Genre: "", Language: "", Year: "" });
   // add
   const [selectedMovie, setSelectedMovie] = useState(null);
-
-
+ 
 
   // Handle form submission
   const handleSubmit = (data) => {
@@ -41,6 +40,7 @@ function App() {
     setSelectedMovie(movie);
   };
 
+
   return (
     <>
       <Navbar />
@@ -49,7 +49,7 @@ function App() {
       <Short-list />
       <MovieSwiper movies={movies}/>
       
-      <hr />
+       <hr />
       {/* add */}
       {selectedMovie ? (
         <MovieCard
@@ -57,9 +57,10 @@ function App() {
           onClose={() => setSelectedMovie(null)}
         />
       ) : (
-      //  <MovieList movies={movies} /> 
+      
        <MovieList movies={movies} onSelect={handleMovieSelect} />
-       )}
+       )} 
+       
     </>
   );
 }

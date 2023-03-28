@@ -50,20 +50,6 @@ function MovieCard(props) {
         <button className="rightButton" onClick={() => handleSwipe("right")}>Go Next</button>
         </div>
 
-
-
-
-
-
-      {/* </div> */}
-      {/* { <div className="shortlist">
-        <h3>Shortlist</h3>
-        <ul>
-          {shortlist.map((movie) => (
-            <li key={movie.id}>{movie.title}</li>
-          ))}
-        </ul>
-      </div> */}
     </div> 
   );
 }
