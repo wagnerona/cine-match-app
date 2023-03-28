@@ -2,13 +2,13 @@
 
 
 * [Description](##Description)
-* [User-Story] (##User-Story)
+* [User-Story](##User-Story)
 * [Installation](#Installation)
 * [Usage](#Usage)
 * [Configuration](#Configuration)
 * [License](#License)
 * [Tests](#Tests)
-* [Screenshot] (##Screenshots)
+* [Screenshot](##Screenshots)
 * [Questions](##Questions)
 
 ### Description 
