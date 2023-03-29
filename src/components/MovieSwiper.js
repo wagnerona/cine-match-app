@@ -11,22 +11,13 @@ function MovieSwiper({ movies, onMovieSubmit }) {
   const [shortlist, setShortlist] = useState([]);
   // const [storage, setStorage] = useEffect();
 
-
-  
-
-
   const handleShortList = () => {
     // event.preventDefault();
     // updating the shortlist data
     // setChosenMovie([...shortlist, chosenMovie]);
-    // onMovieSubmit(shortlist);
+    onMovieSubmit(shortlist);
     console.log(shortlist);
-   
-  };
-
-    useEffect(() => {
-        // const jsonShortlist = JSON.stringify(shortlist); // convert new data to JSON format
-        const storedShortlist = localStorage.getItem('movie'); // retrieve existing data from localStorage
+    const storedShortlist = localStorage.getItem('movie'); // retrieve existing data from localStorage
         let parsedStoredShortlist = null;
           if (storedShortlist) {
               parsedStoredShortlist = JSON.parse(storedShortlist); // parse existing data if present
@@ -35,7 +26,8 @@ function MovieSwiper({ movies, onMovieSubmit }) {
         const movieArray = Array.isArray(parsedStoredShortlist) ? parsedStoredShortlist : (parsedStoredShortlist ? [parsedStoredShortlist] : []); // check if parsed data is an array and create an array with single movie object if not
         const combinedData = [...movieArray, ...shortlist]; // combine existing and new data
           localStorage.setItem('movie', JSON.stringify(combinedData)); // save combined data to localStorage  
-        }, [shortlist]);
+        // }, [shortlist]);
+  };
 
   function handleSwipe(direction) {
     if (direction === "right") {
@@ -45,13 +37,13 @@ function MovieSwiper({ movies, onMovieSubmit }) {
     setCurrentMovieIndex(currentMovieIndex + 1); // show next movie
   }
 
-
   if (currentMovieIndex >= movies.length) {
     // end of movie list, show some message or redirect to another page
     return <p>No more movies to display</p>;
   }
 
   const currentMovie = movies[currentMovieIndex];
+
 
   return (
     <div name="picks" className='w-full md:h-screen bg-[#141d2b] text-white'>
@@ -85,12 +77,12 @@ function MovieSwiper({ movies, onMovieSubmit }) {
               onClick={() => handleSwipe("left")}
             >Swipe left
             </button>
-            {/* <Link to="/my-movies"> */}
+            <Link to="/my-movies">
               <button className="FinishButton block w-full rounded border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-gray hover:bg-transparent hover:text-gray focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
                 onClick={handleShortList}>
                 Done! Show me my movie list
               </button>
-            {/* </Link> */}
+            </Link>
             <button className="rightButton rounded border border-blue-600 bg-[#50b49b] px-12 py-3 text-sm font-medium text-white hover:bg-[#50b49b86] hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto" onClick={() => handleSwipe("right")}>Swipe right</button>
           </div>
         </div>
