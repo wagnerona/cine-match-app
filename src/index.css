@@ -21,7 +21,42 @@
       height: 100%;
     } */
     
-    main {
+    /* body {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      margin: 0 auto;
+      margin-left: 0 auto;
+      max-width: auto 600px;
+    }
+    
+    /* img {
+      max-width: 150px;
+    
+    } */
+    /* .profile {
+      max-width: 150px;
+      display: grid;
+        float: left;
+        margin-right: 20px;
+       
+      }
+     */
+    
+    /* form {
+      width: 380px;
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+    
+    }
+    
+    form > * {
+      padding: 7px 10px;
+      margin-bottom: 7px;
+      border: 1px solid #ccc;
+      outline: none;
+    
+    } */
+    /* main {
     
       padding: 25px 3%;
     }
@@ -37,25 +72,25 @@
       text-align: center;
       margin: 0 auto;
       line-height: 1.5;
-    }
-    header {
+    } */
+    /* header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       background-color: #999;
       padding: 9px 3%;
-    }
-    h3 {
+    } */
+    /* h3 {
     
       color: #fff;
-    }
-    header nav a {
+    } */
+    /* header nav a {
       color: #fff;
      font-size: .95rem;
      text-decoration: none; 
-    }
+    } */
     
-    header nav a {
+    /* header nav a {
       color: #fff;
       text-decoration: none;
     }
@@ -66,7 +101,7 @@
     header nav a.active {
       text-decoration: underline;
     }
-    
+     */
     .movie-gallery {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
@@ -120,9 +155,13 @@
       justify-content: center;
       align-items: center;
     }
-  /* added movie card with a background color */
+  /* add */
        .movie-card {
-        
+        /* text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative; */
         position: relative;
         display: flex;
         flex-direction: column;
@@ -134,7 +173,7 @@
         transition: transform 0.3s ease-in-out;
         background: linear-gradient(to bottom right, #000000, #003366, #173646, #097482);
       }
-      
+      /* not mine */
       .movie-card img {
         max-width: 250px;
         max-height: 275px;
@@ -144,7 +183,7 @@
         box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
         background-color: #e5e7eb;
       }
-      /* added movie details a specific background to visible the details */
+      /* add */
       .movie-details {
         margin-bottom: 20px;;
         background: hwb(90 83% 15%);
@@ -156,7 +195,7 @@
         transition: transform 0.3s ease-in-out;
        }
        
-         /*added the movie search title top of the poster with design*/ 
+             /* add */
         .movie-details h2 {
           background-image: linear-gradient(to right, #63bc9b, #2e30a4, #7b21b7);
           -webkit-background-clip: text;
@@ -168,7 +207,7 @@
           text-align: center;
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
         }
-        /* added movie details poster design */
+        /* add */
         .movie-details img {
           display: block;
           margin: 0 auto;
@@ -185,7 +224,7 @@
         }
       
   
-      
+      /* add */
       .movie-detail {
         font-size: 20px;
         margin-top: 8px;
@@ -193,14 +232,23 @@
         background-clip: text; 
         -webkit-text-fill-color: transparent;
       }
-      /* added movie swiping buttons design */
+
       .swipe-buttons {
         display: flex;
         justify-content: space-around;
       }
 
-      .movie-card .leftButton {  
-        margin: 0 10px;
+      .movie-card .leftButton { 
+         /* left: 0;
+        border: 1px solid green;
+        color: green; 
+        margin-left: 275px; 
+        background-color: #f5f5f5;
+        top: 50%;
+        transform: translateY(-50%); */
+
+      
+         margin: 0 10px;
         border: 1px solid green;
         color: green;   
         background-color: #f5f5f5;
@@ -223,8 +271,9 @@
         transition: background-color 0.3s ease-in-out;
         
       } 
-      /* added remove sign design for each movie */
-      .overlay .remove {
+
+       /* added remove sign design for each movie */
+       .overlay .remove {
         color: #ff1744;
         font-size: 48px;
         position: absolute;
@@ -269,7 +318,7 @@
         display: inline-block;
         margin-top: 20px;
       }
-      
-      
-      
-      
+ 
+        
+         
+
