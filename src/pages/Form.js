@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 
 
+
 const Form = ({ onSubmit }) => {
 
     const [formData, setFormData] = useState({ Genre: "", Language: "", Year: "" })

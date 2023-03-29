@@ -11,6 +11,7 @@ import Home from './pages/home';
 import { fetchData } from "./Utils/movie-api.js"
 
 
+
 function App() {
 
   const [movies, setMovies] = useState([]);

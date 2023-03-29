@@ -1,30 +1,41 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+
+
 
 
 function MovieSwiper({ movies, onMovieSubmit }) {
 
-  const [swipeDirection, setSwipeDirection] = useState(null);
+  // const [swipeDirection, setSwipeDirection] = useState(null);
   const [currentMovieIndex, setCurrentMovieIndex] = useState(0);
   const [shortlist, setShortlist] = useState([]);
+  // const [storage, setStorage] = useEffect();
+
+
+  
+
 
   const handleShortList = () => {
     // event.preventDefault();
     // updating the shortlist data
     // setChosenMovie([...shortlist, chosenMovie]);
-    onMovieSubmit(shortlist);
+    // onMovieSubmit(shortlist);
     console.log(shortlist);
-    const jsonShortlist = JSON.stringify(shortlist);
-    const storedShortlist = localStorage.setItem('movie', jsonShortlist);
-    // Check if movieStorageData is not null and parse JSON string
-    const parsedStoredShortlist = storedShortlist ? JSON.parse(storedShortlist) : null;
-
-    // Check if parsedMovieStorageData is an array, if not, create an array with the single movie object
-    const movieArray = Array.isArray(parsedStoredShortlist) ? parsedStoredShortlist : [parsedStoredShortlist];
-
-
+   
   };
 
+    useEffect(() => {
+        // const jsonShortlist = JSON.stringify(shortlist); // convert new data to JSON format
+        const storedShortlist = localStorage.getItem('movie'); // retrieve existing data from localStorage
+        let parsedStoredShortlist = null;
+          if (storedShortlist) {
+              parsedStoredShortlist = JSON.parse(storedShortlist); // parse existing data if present
+              }
+  
+        const movieArray = Array.isArray(parsedStoredShortlist) ? parsedStoredShortlist : (parsedStoredShortlist ? [parsedStoredShortlist] : []); // check if parsed data is an array and create an array with single movie object if not
+        const combinedData = [...movieArray, ...shortlist]; // combine existing and new data
+          localStorage.setItem('movie', JSON.stringify(combinedData)); // save combined data to localStorage  
+        }, [shortlist]);
 
   function handleSwipe(direction) {
     if (direction === "right") {
@@ -74,12 +85,12 @@ function MovieSwiper({ movies, onMovieSubmit }) {
               onClick={() => handleSwipe("left")}
             >Swipe left
             </button>
-            <Link to="/my-movies">
+            {/* <Link to="/my-movies"> */}
               <button className="FinishButton block w-full rounded border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-gray hover:bg-transparent hover:text-gray focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
                 onClick={handleShortList}>
                 Done! Show me my movie list
               </button>
-            </Link>
+            {/* </Link> */}
             <button className="rightButton rounded border border-blue-600 bg-[#50b49b] px-12 py-3 text-sm font-medium text-white hover:bg-[#50b49b86] hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto" onClick={() => handleSwipe("right")}>Swipe right</button>
           </div>
         </div>
