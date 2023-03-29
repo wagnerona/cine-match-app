@@ -1,7 +1,5 @@
 import React from 'react';
-import movieData from '../data/movies.json';
 import '../index.css';
-// import {webpack} from 'Webpack';
 
 
 const getShortList = JSON.parse(localStorage.movie);

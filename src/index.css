@@ -56,7 +56,7 @@
       outline: none;
     
     } */
-    main {
+    /* main {
     
       padding: 25px 3%;
     }
@@ -72,25 +72,25 @@
       text-align: center;
       margin: 0 auto;
       line-height: 1.5;
-    }
-    header {
+    } */
+    /* header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       background-color: #999;
       padding: 9px 3%;
-    }
-    h3 {
+    } */
+    /* h3 {
     
       color: #fff;
-    }
-    header nav a {
+    } */
+    /* header nav a {
       color: #fff;
      font-size: .95rem;
      text-decoration: none; 
-    }
+    } */
     
-    header nav a {
+    /* header nav a {
       color: #fff;
       text-decoration: none;
     }
@@ -101,7 +101,7 @@
     header nav a.active {
       text-decoration: underline;
     }
-    
+     */
     .movie-gallery {
       display: grid;
       grid-template-columns: repeat(5, 1fr);

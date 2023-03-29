@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import MovieCard from "./MovieCard.js";
-// import MoviePicker from "./MoviePicker.js";
 import { Link } from "react-router-dom";
 
 
