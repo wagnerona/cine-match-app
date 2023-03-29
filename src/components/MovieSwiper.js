@@ -16,12 +16,12 @@ function MovieSwiper({ movies, onMovieSubmit }) {
     console.log(shortlist);
     const jsonShortlist = JSON.stringify(shortlist);
     const storedShortlist = localStorage.setItem('movie', jsonShortlist);
-     // Check if movieStorageData is not null and parse JSON string
-  const parsedStoredShortlist = storedShortlist ? JSON.parse(storedShortlist) : null;
+    // Check if movieStorageData is not null and parse JSON string
+    const parsedStoredShortlist = storedShortlist ? JSON.parse(storedShortlist) : null;
 
-  // Check if parsedMovieStorageData is an array, if not, create an array with the single movie object
-  const movieArray = Array.isArray(parsedStoredShortlist) ? parsedStoredShortlist : [parsedStoredShortlist];
-    
+    // Check if parsedMovieStorageData is an array, if not, create an array with the single movie object
+    const movieArray = Array.isArray(parsedStoredShortlist) ? parsedStoredShortlist : [parsedStoredShortlist];
+
 
   };
 
@@ -43,37 +43,45 @@ function MovieSwiper({ movies, onMovieSubmit }) {
   const currentMovie = movies[currentMovieIndex];
 
   return (
-    <div name="picks" className='w-full md:h-screen text-[#212529]'>
-      <div className="mx-auto px-8 flex flex-col justify-center h-full">
-        <h1>Swipe right to keep or left to dismiss the movie</h1>
+    <div name="picks" className='w-full md:h-screen bg-[#141d2b] text-white'>
+      <div className="mx-[34rem] px-5 flex flex-col justify-center h-full">
+        <h1 className="animate-text pb-3 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-4xl text-center">
+          Our picks for you
+        </h1>
+        <h2 className="text-center pb-16 ">Swipe right to add to your movie list, or left to skip. Once done click "Done!" to see your movie list</h2>
         <div className="movie-card">
-        <div className="movie-details">
-          <h2>{currentMovie.title}</h2>
+          <div className="movie-details grid grid-rows-3 grid-flow-col gap-4">
 
-         
-          <img className="mx-auto w-72 h-128" src={`http://image.tmdb.org/t/p/w185${currentMovie.poster_path}`} alt={currentMovie.title} />
-         
-          <p className="movie-detail">{currentMovie.overview}</p>
-          <p className="movie-detail"><strong>Release Date:</strong> {currentMovie.release_date}</p>
-          <p className=" movie-detail"><strong>Language:</strong> {currentMovie.original_language}</p>
-          <p className=" movie-detail"><strong>Rating:</strong> {currentMovie.vote_average}</p>
+            <div className="row-span-3">
+              <img className="w-72 h-128 rounded-lg shadow-lg" src={`http://image.tmdb.org/t/p/w342${currentMovie.poster_path}`} alt={currentMovie.title} />
+            </div>
 
-           </div>
-          <div className="swipe-buttons">
-            <button className="leftButton" onClick={() => handleSwipe("left")}>Swipe left</button>
-            <button className="rightButton" onClick={() =>  handleSwipe("right") }>Swipe right</button>
+            <div className="col-span-2">
+              <h2 className="movie-detail text-2xl content-center ">{currentMovie.title}</h2>
+            </div>
+
+            <div className="row-span-2 col-span-2">
+              <p className="movie-detail">{currentMovie.overview}</p>
+              <p className="movie-detail"><strong>Release Date:</strong> {currentMovie.release_date}</p>
+              <p className=" movie-detail"><strong>Language:</strong> {currentMovie.original_language}</p>
+              <p className=" movie-detail"><strong>Rating:</strong> {currentMovie.vote_average}</p>
+            </div>
+
           </div>
-          <div className="shortlist">
-            <h3>Shortlist</h3>
+          <div className="swipe-buttons flex justify-center gap-10 pt-24">
+            <button
+              className="leftButton rounded border border-blue-600 bg-[#b45050] px-12 py-3 text-sm font-medium text-white hover:bg-[#b4505070] hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
+              onClick={() => handleSwipe("left")}
+            >Swipe left
+            </button>
+            <Link to="/my-movies">
+              <button className="FinishButton block w-full rounded border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-gray hover:bg-transparent hover:text-gray focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
+                onClick={handleShortList}>
+                Done! Show me my movie list
+              </button>
+            </Link>
+            <button className="rightButton rounded border border-blue-600 bg-[#50b49b] px-12 py-3 text-sm font-medium text-white hover:bg-[#50b49b86] hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto" onClick={() => handleSwipe("right")}>Swipe right</button>
           </div>
-        </div>
-        <div>
-          <Link to="/my-movies">
-          <button className="FinishButton block w-full rounded border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-gray hover:bg-transparent hover:text-gray focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
-            onClick={handleShortList}>
-            Done! Show me my movies
-          </button>
-          </Link>
         </div>
       </div>
     </div>

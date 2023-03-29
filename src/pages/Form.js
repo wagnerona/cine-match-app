@@ -23,10 +23,12 @@ const Form = ({ onSubmit }) => {
     }
 
     return (
-        <div name="Form" className='w-full md:h-screen text-[#212529]'>
+        <div name="Form" className='bg-[#141d2b] w-full md:h-screen text-white'>
             <div className='max-w-[500px] mx-auto px-8 flex flex-col justify-center h-full'>
-                <h1 className='text-4xl text-center un'>Movie types</h1>
-                <form onSubmit={handleSubmit}>
+                <h1 className="animate-text pb-20 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-4xl text-center">
+                    What type of movies are you looking for?
+                </h1>
+                <form className='flex-column p-4 outline-double outline-cyan-500 rounded outline-offset-8 ' onSubmit={handleSubmit}>
                     <label className="font-medium text-lg pt-3">
                         Genre:
                         <input
@@ -63,11 +65,13 @@ const Form = ({ onSubmit }) => {
                         />
                     </label>
                     <br />
+                    <div className='flex justify-center'>
                     <button
-                        className='rounded-md bg-gray-400 py-2 px-3 text-sm font-semibold text-white shadow-sm hover:bg-gray-500'
+                        className='rounded border border-blue-600 bg-[#50b49b] px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto'
                         type="submit"
                     >Submit
                     </button>
+                    </div>
                 </form>
             </div>
         </div>

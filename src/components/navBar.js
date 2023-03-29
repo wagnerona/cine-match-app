@@ -13,10 +13,10 @@ const Navbar = () => {
             {/* full navbar */}
           
             <ul className='flex'>
-                <li className='px-5 transform hover:scale-110 hover:bg-red-300 rounded-full transition duration-500'>
+                <li className='px-5 transform hover:scale-110 hover:bg-[#50b49b] rounded transition duration-500'>
                     <Link to='/'>Home</Link>
                 </li>
-                <li className='px-5 transform hover:scale-110 hover:bg-red-300 rounded-full transition duration-500'>
+                <li className='px-5 transform hover:scale-110 hover:bg-[#50b49b] rounded transition duration-500'>
                     <Link to='/my-movies'>My movies</Link>
                 </li>
             </ul>
