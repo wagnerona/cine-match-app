@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from "react";
-import MovieCard from "./MovieCard.js";
-// import MoviePicker from "./MoviePicker.js";
 import { Link } from "react-router-dom";
-import useLocalStorage from '../Utils/useLocalStorage'
+
 
 
 
 function MovieSwiper({ movies, onMovieSubmit }) {
 
-  const [swipeDirection, setSwipeDirection] = useState(null);
+  // const [swipeDirection, setSwipeDirection] = useState(null);
   const [currentMovieIndex, setCurrentMovieIndex] = useState(0);
   const [shortlist, setShortlist] = useState([]);
+  // const [storage, setStorage] = useEffect();
+
+
   
 
 
@@ -19,10 +20,11 @@ function MovieSwiper({ movies, onMovieSubmit }) {
     // updating the shortlist data
     // setChosenMovie([...shortlist, chosenMovie]);
     onMovieSubmit(shortlist);
-    console.log(shortlist);  
+    console.log(shortlist);
+   
   };
 
-  useEffect(() => {
+    useEffect(() => {
         // const jsonShortlist = JSON.stringify(shortlist); // convert new data to JSON format
         const storedShortlist = localStorage.getItem('movie'); // retrieve existing data from localStorage
         let parsedStoredShortlist = null;
@@ -30,10 +32,10 @@ function MovieSwiper({ movies, onMovieSubmit }) {
               parsedStoredShortlist = JSON.parse(storedShortlist); // parse existing data if present
               }
   
-  const movieArray = Array.isArray(parsedStoredShortlist) ? parsedStoredShortlist : (parsedStoredShortlist ? [parsedStoredShortlist] : []); // check if parsed data is an array and create an array with single movie object if not
-  const combinedData = [...movieArray, ...shortlist]; // combine existing and new data
-    localStorage.setItem('movie', JSON.stringify(combinedData)); // save combined data to localStorage
-}, [shortlist]);
+        const movieArray = Array.isArray(parsedStoredShortlist) ? parsedStoredShortlist : (parsedStoredShortlist ? [parsedStoredShortlist] : []); // check if parsed data is an array and create an array with single movie object if not
+        const combinedData = [...movieArray, ...shortlist]; // combine existing and new data
+          localStorage.setItem('movie', JSON.stringify(combinedData)); // save combined data to localStorage  
+        }, [shortlist]);
 
   function handleSwipe(direction) {
     if (direction === "right") {
