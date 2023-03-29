@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import MovieCard from "./MovieCard.js";
-// import MoviePicker from "./MoviePicker.js";
+//import MovieCard from "./MovieCard.js";
+
 import { Link } from "react-router-dom";
 
 
@@ -11,10 +11,9 @@ function MovieSwiper({ movies, onMovieSubmit }) {
   const [shortlist, setShortlist] = useState([]);
 
   const handleShortList = () => {
-    // event.preventDefault();
+    
     // updating the shortlist data
-    // setChosenMovie([...shortlist, chosenMovie]);
-    onMovieSubmit(shortlist);
+     onMovieSubmit(shortlist);
     console.log(shortlist);
     const jsonShortlist = JSON.stringify(shortlist);
     const storedShortlist = localStorage.setItem('movie', jsonShortlist);
@@ -44,6 +43,9 @@ function MovieSwiper({ movies, onMovieSubmit }) {
 
   const currentMovie = movies[currentMovieIndex];
 
+
+
+
   return (
     <div name="picks" className='w-full md:h-screen text-[#212529]'>
       <div className="mx-auto px-8 flex flex-col justify-center h-full">
@@ -62,7 +64,7 @@ function MovieSwiper({ movies, onMovieSubmit }) {
 
            </div>
           <div className="swipe-buttons">
-            <button className="leftButton" onClick={() => handleSwipe("left")}>Swipe left</button>
+            <button className="leftButton" onClick={() => {handleSwipe("left")}}>Swipe left</button>
             <button className="rightButton" onClick={() =>  handleSwipe("right") }>Swipe right</button>
           </div>
           <div className="shortlist">
@@ -83,3 +85,4 @@ function MovieSwiper({ movies, onMovieSubmit }) {
 }
 
 export default MovieSwiper;
+
