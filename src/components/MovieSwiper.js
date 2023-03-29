@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 
-
-
 function MovieSwiper({ movies, onMovieSubmit }) {
 
   // const [swipeDirection, setSwipeDirection] = useState(null);
@@ -11,22 +9,13 @@ function MovieSwiper({ movies, onMovieSubmit }) {
   const [shortlist, setShortlist] = useState([]);
   // const [storage, setStorage] = useEffect();
 
-
-  
-
-
   const handleShortList = () => {
     // event.preventDefault();
     // updating the shortlist data
     // setChosenMovie([...shortlist, chosenMovie]);
     onMovieSubmit(shortlist);
     console.log(shortlist);
-   
-  };
-
-    useEffect(() => {
-        // const jsonShortlist = JSON.stringify(shortlist); // convert new data to JSON format
-        const storedShortlist = localStorage.getItem('movie'); // retrieve existing data from localStorage
+    const storedShortlist = localStorage.getItem('movie'); // retrieve existing data from localStorage
         let parsedStoredShortlist = null;
           if (storedShortlist) {
               parsedStoredShortlist = JSON.parse(storedShortlist); // parse existing data if present
@@ -35,7 +24,21 @@ function MovieSwiper({ movies, onMovieSubmit }) {
         const movieArray = Array.isArray(parsedStoredShortlist) ? parsedStoredShortlist : (parsedStoredShortlist ? [parsedStoredShortlist] : []); // check if parsed data is an array and create an array with single movie object if not
         const combinedData = [...movieArray, ...shortlist]; // combine existing and new data
           localStorage.setItem('movie', JSON.stringify(combinedData)); // save combined data to localStorage  
-        }, [shortlist]);
+        // }, [shortlist]);
+  };
+
+    // useEffect(() => {
+        // const jsonShortlist = JSON.stringify(shortlist); // convert new data to JSON format
+        // const storedShortlist = localStorage.getItem('movie'); // retrieve existing data from localStorage
+        // let parsedStoredShortlist = null;
+        //   if (storedShortlist) {
+        //       parsedStoredShortlist = JSON.parse(storedShortlist); // parse existing data if present
+        //       }
+  
+        // const movieArray = Array.isArray(parsedStoredShortlist) ? parsedStoredShortlist : (parsedStoredShortlist ? [parsedStoredShortlist] : []); // check if parsed data is an array and create an array with single movie object if not
+        // const combinedData = [...movieArray, ...shortlist]; // combine existing and new data
+        //   localStorage.setItem('movie', JSON.stringify(combinedData)); // save combined data to localStorage  
+        // }, [shortlist]);
 
   function handleSwipe(direction) {
     if (direction === "right") {
@@ -44,7 +47,6 @@ function MovieSwiper({ movies, onMovieSubmit }) {
     }
     setCurrentMovieIndex(currentMovieIndex + 1); // show next movie
   }
-
 
   if (currentMovieIndex >= movies.length) {
     // end of movie list, show some message or redirect to another page
