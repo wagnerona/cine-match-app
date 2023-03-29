@@ -257,6 +257,51 @@
       } 
 
        */
-        
+       .overlay .remove {
+        color: #ff1744;
+        font-size: 48px;
+        position: absolute;
+        top: -20px;
+        right: 5px;
+        cursor: pointer;
+      }
+      
+      .overlay .remove:hover {
+        color: #d50000;
+      }
+        /*added design if no movies left in the shortlist*/
+      .no-movies {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ff1744;
+        font-size: 48px;
+        position: absolute;
+        height: 100%;
+        flex-direction: column;
+      }
+      .movie-message {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin-bottom: 20px;
+      }
+      
+      .no-movies p {
+        color: rgb(36, 6, 6);
+        text-align: center;
+      }
+      
+      .btn {
+        border: 2px solid red;
+        border-radius: 20px;
+        padding: 10px 20px;
+        color: red;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 20px;
+      }
+ 
          
 
