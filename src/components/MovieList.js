@@ -4,7 +4,7 @@ import '../index.css';
 
 const getShortList = JSON.parse(localStorage.movie);
 console.log(getShortList);
-export function MovieList({ movies }) {
+export function MovieList() {
   return (
     <>   
 
