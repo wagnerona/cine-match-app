@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../index.css';
+import { Link } from "react-router-dom";
 
 export function MovieList({ movies }) {
   const [shortList, setShortList] = useState([]);
@@ -21,20 +21,20 @@ export function MovieList({ movies }) {
   };
 
   return (
-    <div name="picks" className='w-full md:h-screen text-[#212529]'>
+    <div name="picks" className='w-full md:h-screen bg-[#141d2b] text-white'>
       {shortList.length > 0 ? (
-        <div className="movie-gallery pt-20">
+        <div className="grid grid-cols-8 gap-20 pt-20">
           {/* Show the shortlisted movies in the list */}
           {shortList.map((shorty) => (
-            <div className="movie" key={shorty.id}>
-              <img
+            <div className="movie relative overflow-hidden cursor-pointer" key={shorty.id}>
+              <img className='block max-w-full h-auto transition-transform duration-300 ease-out'
                 src={`http://image.tmdb.org/t/p/w185${shorty.poster_path}`}
                 alt={shorty.title}
               />
               <div className="overlay">
                 <h3>{shorty.title}</h3>
                 {/* By clicking this button it will clear the shortlisted movies from gallery and localstorage */}
-                <button className="remove" onClick={() => handleRemove(shorty.id)}>𝘅</button>
+                <button className="remove bg-red-400 rounded px-2 py-1" onClick={() => handleRemove(shorty.id)}>Remove</button>
               </div>
             </div>
           ))}
@@ -42,12 +42,23 @@ export function MovieList({ movies }) {
         </div>
       ) : (
         // if no movies left in the shortlist this message generates
-        <div className="movie-message pt-20">
-          <div className="no-movies">
-            <p>No movies in the shortlist!</p>
-           <p className="btn px-5 transform hover:scale-110 hover:bg-red-300 rounded-full transition duration-500">🔺Click Home🔺</p> 
+        <div name="picks" className='w-full md:h-screen bg-[#141d2b] text-white'>
+        <div className="mx-[34rem] px-5 flex flex-col justify-center h-full">
+          <h1 className="animate-text pb-3 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-4xl text-center">
+            You don't have any movies here yet
+          </h1>
+          <div className="movie-card p-10">
+            <div className="swipe-buttons flex justify-center gap-8">
+              <Link to="/form">
+                <button className="block w-full rounded border border-blue-600 bg-[#50b49b] px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
+                >
+                  Search for movies
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
+      </div>
       )}
     </div>
   );

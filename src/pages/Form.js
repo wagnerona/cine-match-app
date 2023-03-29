@@ -33,7 +33,7 @@ const Form = ({ onSubmit }) => {
                     <label className="font-medium text-lg pt-3">
                         Genre:
                         <input
-                            className='mt-2 w-full rounded-lg h-10 mb-2 block border-2 border-600 placeholder:font-normal px-2'
+                            className='mt-2 w-full rounded-lg h-10 mb-2 block border-2 border-600 placeholder:font-normal px-2 text-black'
                             placeholder="Action, Thriller, Comedy..."
                             type="text"
                             name="genre"
@@ -45,7 +45,7 @@ const Form = ({ onSubmit }) => {
                     <label className="font-medium text-lg pt-3">
                         Year:
                         <input
-                            className='mt-2 w-full rounded-lg h-10 mb-2 block border-2 border-600 placeholder:font-normal px-2'
+                            className='mt-2 w-full rounded-lg h-10 mb-2 block border-2 border-600 placeholder:font-normal px-2 text-black'
                             placeholder="2005"
                             type="text"
                             name="year"
@@ -57,7 +57,7 @@ const Form = ({ onSubmit }) => {
                     <label className="font-medium text-lg pt-3">
                         Original Language:
                         <input
-                            className='mt-2 w-full rounded-lg h-10 mb-2 block border-2 border-600 placeholder:font-normal px-2'
+                            className='mt-2 w-full rounded-lg h-10 mb-2 block border-2 border-600 placeholder:font-normal px-2 text-black'
                             placeholder="Spanish, French, German ..."
                             type="text"
                             name="language"
