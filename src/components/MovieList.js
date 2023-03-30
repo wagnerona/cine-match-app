@@ -22,7 +22,7 @@ export function MovieList({ movies }) {
 
   return (
     <div name="picks" className='w-full md:h-screen bg-[#141d2b] text-white'>
-      {shortList.length > 0 ? (
+      {shortList ? (
         <div className="grid grid-cols-8 gap-20 pt-20">
           {/* Show the shortlisted movies in the list */}
           {shortList.map((shorty) => (
@@ -43,25 +43,26 @@ export function MovieList({ movies }) {
       ) : (
         // if no movies left in the shortlist this message generates
         <div name="picks" className='w-full md:h-screen bg-[#141d2b] text-white'>
-        <div className="mx-[34rem] px-5 flex flex-col justify-center h-full">
-          <h1 className="animate-text pb-3 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-4xl text-center">
-            You don't have any movies here yet
-          </h1>
-          <div className="movie-card p-10">
-            <div className="swipe-buttons flex justify-center gap-8">
-              <Link to="/form">
-                <button className="block w-full rounded border border-blue-600 bg-[#50b49b] px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
-                >
-                  Search for movies
-                </button>
-              </Link>
+          <div className="mx-[34rem] px-5 flex flex-col justify-center h-full">
+            <h1 className="animate-text pb-3 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-4xl text-center">
+              You don't have any movies here yet
+            </h1>
+            <div className="movie-card p-10">
+              <div className="swipe-buttons flex justify-center gap-8">
+                <Link to="/form">
+                  <button className="block w-full rounded border border-blue-600 bg-[#50b49b] px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
+                  >
+                    Search for movies
+                  </button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
-      </div>
       )}
     </div>
   );
+  
 }
 
 export default MovieList;
