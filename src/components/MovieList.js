@@ -35,20 +35,21 @@ export function MovieList({ movies }) {
                 </button>
               </Link>
             </div>
-          <div className="px-10 grid grid-cols-8 gap-10 pt-10">
+          <div className="px-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 xl:grid-cols-8 gap-10 pt-10">
             {/* Show the shortlisted movies in the list */}
             {shortList.map((shorty) => (
               <div className="movie relative overflow-hidden cursor-pointer rounded-xl drop-shadow-xl" key={shorty.id}>
-                <img className='block max-w-full h-auto transition-transform duration-300 ease-out'
-                  src={`http://image.tmdb.org/t/p/w185${shorty.poster_path}`}
-                  alt={shorty.title}
-                />
-                <div className="overlay">
-                  <h3>{shorty.title}</h3>
-                  {/* By clicking this button it will clear the shortlisted movies from gallery and localstorage */}
-                  <button className="remove bg-red-400 rounded px-2 py-1" onClick={() => handleRemove(shorty.id)}>Remove</button>
-                </div>
+              <img className='block object-cover w-full h-full transition-transform duration-300 ease-out'
+                src={`http://image.tmdb.org/t/p/w185${shorty.poster_path}`}
+                alt={shorty.title}
+              />
+              <div className="overlay">
+                <h3>{shorty.title}</h3>
+                {/* By clicking this button it will clear the shortlisted movies from gallery and localstorage */}
+                <button className="remove bg-red-400 rounded px-2 py-1" onClick={() => handleRemove(shorty.id)}>Remove</button>
               </div>
+            </div>
+            
             ))}
             {!isUpdated && <p>Loading...</p>}
           </div>
