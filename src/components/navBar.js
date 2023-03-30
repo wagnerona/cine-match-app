@@ -4,7 +4,7 @@ import Logo from '../images/logo4.png'
 
 const Navbar = () => {
     return (
-        <header className='fixed w-full h-[65px] font-medium flex justify-between items-center px-20 bg-[#EBE6E0] text-gray-900 z-40'>
+        <header className='fixed w-full h-[65px] font-medium flex justify-between items-center px-1 bg-[#EBE6E0] text-gray-900 z-40 sm:px-20'>
 
             <div>
                 <img src={Logo} alt='Logo' style={{ width: '230px' }} />
@@ -13,10 +13,10 @@ const Navbar = () => {
             {/* full navbar */}
           
             <ul className='flex'>
-                <li className='px-5 transform hover:scale-110 hover:bg-[#50b49b] rounded transition duration-500'>
+                <li className='px-3 flex sm:px-5 transform hover:scale-110 hover:bg-[#50b49b] rounded transition duration-500'>
                     <Link to='/'>Home</Link>
                 </li>
-                <li className='px-5 transform hover:scale-110 hover:bg-[#50b49b] rounded transition duration-500'>
+                <li className='pl-3 pr-5 flex sm:px-5 transform hover:scale-110 hover:bg-[#50b49b] rounded transition duration-500'>
                     <Link to='/my-movies'>My movies</Link>
                 </li>
             </ul>
