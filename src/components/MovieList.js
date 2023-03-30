@@ -23,22 +23,35 @@ export function MovieList({ movies }) {
   return (
     <div name="picks" className='w-full md:h-screen bg-[#141d2b] text-white'>
       {shortList ? (
-        <div className="grid grid-cols-8 gap-20 pt-20">
-          {/* Show the shortlisted movies in the list */}
-          {shortList.map((shorty) => (
-            <div className="movie relative overflow-hidden cursor-pointer" key={shorty.id}>
-              <img className='block max-w-full h-auto transition-transform duration-300 ease-out'
-                src={`http://image.tmdb.org/t/p/w185${shorty.poster_path}`}
-                alt={shorty.title}
-              />
-              <div className="overlay">
-                <h3>{shorty.title}</h3>
-                {/* By clicking this button it will clear the shortlisted movies from gallery and localstorage */}
-                <button className="remove bg-red-400 rounded px-2 py-1" onClick={() => handleRemove(shorty.id)}>Remove</button>
-              </div>
+        <div className='pt-28'>
+          <h1 className="animate-text pb-3 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-4xl text-center">
+            Here are your picked movies :
+          </h1>
+          <h2 className="text-center pb-6 ">If you would like to remove a movie, hover over the image and click "Remove" or if you want to search more movies: </h2>
+          <div className="swipe-buttons flex justify-center gap-8">
+              <Link to="/form">
+                <button className="FinishButton block w-full rounded border border-blue-600 bg-none px-12 py-3 text-sm font-medium text-gray hover:bg-[#50b49b23] hover:text-gray focus:outline-none focus:ring active:text-opacity-75 sm:w-auto">
+                 Search for more movies
+                </button>
+              </Link>
             </div>
-          ))}
-          {!isUpdated && <p>Loading...</p>}
+          <div className="px-10 grid grid-cols-8 gap-10 pt-10">
+            {/* Show the shortlisted movies in the list */}
+            {shortList.map((shorty) => (
+              <div className="movie relative overflow-hidden cursor-pointer rounded-xl drop-shadow-xl" key={shorty.id}>
+                <img className='block max-w-full h-auto transition-transform duration-300 ease-out'
+                  src={`http://image.tmdb.org/t/p/w185${shorty.poster_path}`}
+                  alt={shorty.title}
+                />
+                <div className="overlay">
+                  <h3>{shorty.title}</h3>
+                  {/* By clicking this button it will clear the shortlisted movies from gallery and localstorage */}
+                  <button className="remove bg-red-400 rounded px-2 py-1" onClick={() => handleRemove(shorty.id)}>Remove</button>
+                </div>
+              </div>
+            ))}
+            {!isUpdated && <p>Loading...</p>}
+          </div>
         </div>
       ) : (
         // if no movies left in the shortlist this message generates
@@ -62,7 +75,7 @@ export function MovieList({ movies }) {
       )}
     </div>
   );
-  
+
 }
 
 export default MovieList;
