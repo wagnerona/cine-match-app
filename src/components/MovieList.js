@@ -21,7 +21,7 @@ export function MovieList({ movies }) {
   };
 
   return (
-    <div name="picks" className='w-full h-full sm:h-full lg:h-screen bg-[#141d2b] text-white'>
+    <div name="picks" className='w-full min-h-screen sm:h-full lg:min-h-screen bg-[#141d2b] text-white'>
       {shortList && shortList.length > 0 ? (
         <>
           <h1 className="animate-text pt-24 pb-3 px-2 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-4xl text-center">
@@ -56,8 +56,8 @@ export function MovieList({ movies }) {
         </>
       ) : (
         // if no movies left in the shortlist this message generates
-        <div name="no-picks" className='w-full md:h-screen bg-[#141d2b] text-white'>
-          <div className="mx-[34rem] px-5 flex flex-col justify-center h-full">
+        <div name="no-picks" className='w-full h-screen bg-[#141d2b] text-white'>
+          <div className="mx-auto px-5 flex flex-col justify-center h-full">
             <h1 className="animate-text pb-3 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-4xl text-center">
               You don't have any movies here yet
             </h1>

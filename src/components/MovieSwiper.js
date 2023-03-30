@@ -70,8 +70,8 @@ function MovieSwiper({ movies, onMovieSubmit }) {
 
 
   return (
-    <div name="picks" className='w-full h-full md:h-screen bg-[#141d2b] text-white'>
-  <div className="pt-24 mx-4 sm:mx-[5%] lg:mx-[20%]  px-5 flex flex-col justify-center">
+    <div name="picks" className='w-full min-h-screen md:min-h-screen bg-[#141d2b] text-white'>
+  <div className="pt-24 mx-4 sm:mx-[5%] xl:mx-[20%]  px-5 flex flex-col justify-center">
     <h1 className="animate-text pb-3 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-4xl text-center">
       Our picks for you
     </h1>
