@@ -24,7 +24,7 @@ const Form = ({ onSubmit }) => {
     }
 
     return (
-        <div name="Form" className='bg-[#141d2b] w-full md:h-screen text-white'>
+        <div name="Form" className='bg-[#141d2b] w-full h-screen text-white'>
             <div className='max-w-[500px] mx-auto px-8 flex flex-col justify-center h-full'>
                 <h1 className="animate-text pb-20 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-4xl text-center">
                     What type of movies are you looking for?
