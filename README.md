@@ -1,10 +1,11 @@
 # CineMatch 
 
 
-  * 1. [Description](##Description)
-* 2. [Installation](#Installation)
-* 3. [Usage](#Usage)
-* 4. [Configuration](#Configuration)
+* 1. [Description](##Description)
+* 2. [User-Story]##(User-Story)
+* 3. [Installation](#Installation)
+* 4. [Usage](#Usage)
+* 5. [Technologies](#Technologies)
 * 5. [License](#License)
 * 6. [Tests](#Tests)
 * 7. [Screenshots](#Screenshots)
@@ -55,6 +56,6 @@
     ## Questions
     Contact the developers with any questions at the following email addresses:<br> 
     📧 [Wagner](mailto:),<br>
-📧[Joanna](jo.stillawake@gmail.com),<br>
-📧[Sinthiya](mailto:sinthiya.islamjuly35@gmail.com), <br>
-📧[Fiona](mailto:) <br>
+    📧[Joanna](jo.stillawake@gmail.com),<br>
+    📧[Sinthiya](mailto:sinthiya.islamjuly35@gmail.com), <br>
+    📧[Fiona](mailto:) <br>
