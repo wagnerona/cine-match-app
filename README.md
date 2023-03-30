@@ -8,6 +8,21 @@ As a user, you visit the site and choose to search for movies by selecting betwe
 Once you search by your choice(s) you are shown a list of movie options one by one. Just like with Tinder, you can swipe left to get rid of the choice or swipe right to keep your movie choice.
 The movies you have swiped right on are kept in a shortlist so you can review them.
 
+## Links
+Link to app:
+
+- https://cinematch.netlify.app/
+
+
+Presentation:
+
+- https://docs.google.com/presentation/d/1UJXsa_gXuaGNg8oANExOqX8CXPnlnltEicAQ-8yryU4/edit
+
+Source Code:
+
+- https://github.com/wagnerona/cine-match-app
+
+## Contents
 
 - [User Story](#user-story)
 - [Usage](#Usage)
@@ -52,7 +67,7 @@ We have tested this through deploying it on Netlify and through compiling it thr
 <img src = "src/images/home-preview.png">
 <img src = "src/images/form-preview.png">
 <img src = "src/images/swipe-preview.png">
-<img src = "src/images/movie-list-preview.png">
+<img src = "src/images/movies-preview.png">
 
 ## External Resources
 
@@ -63,6 +78,6 @@ We have tested this through deploying it on Netlify and through compiling it thr
 
 Contact the developers with any questions at the following email addresses:<br>
 📧 [Wagner](mailto:wagneroprd@gmail.com),<br>
-📧[Joanna](jo.stillawake@gmail.com),<br>
+📧[Joanna](mailto:jo.stillawake@gmail.com),<br>
 📧[Sinthiya](mailto:sinthiya.islamjuly35@gmail.com), <br>
-📧[Fiona](mailto:) <br>
+📧[Fiona](mailto:fitzfinoo@gmail.com) <br>
