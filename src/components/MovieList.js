@@ -21,13 +21,13 @@ export function MovieList({ movies }) {
   };
 
   return (
-    <div name="picks" className='w-full md:h-screen bg-[#141d2b] text-white'>
+    <div name="picks" className='w-full min-h-screen sm:h-full lg:min-h-screen bg-[#141d2b] text-white'>
       {shortList && shortList.length > 0 ? (
         <>
-          <h1 className="animate-text pt-24 pb-3 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-4xl text-center">
+          <h1 className="animate-text pt-24 pb-3 px-2 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-4xl text-center">
             Here are your picked movies :
           </h1>
-          <h2 className="text-center pb-6 ">If you would like to remove a movie, hover over the image and click "Remove" or if you want to search more movies: </h2>
+          <h2 className="text-center pb-6 px-4">If you would like to remove a movie, hover over the image and click "Remove" or if you want to search more movies: </h2>
           <div className="swipe-buttons flex justify-center gap-8">
               <Link to="/form">
                 <button className="FinishButton block w-full rounded border border-blue-600 bg-none px-12 py-3 text-sm font-medium text-gray hover:bg-[#50b49b23] hover:text-gray focus:outline-none focus:ring active:text-opacity-75 sm:w-auto">
@@ -56,8 +56,8 @@ export function MovieList({ movies }) {
         </>
       ) : (
         // if no movies left in the shortlist this message generates
-        <div name="no-picks" className='w-full md:h-screen bg-[#141d2b] text-white'>
-          <div className="mx-[34rem] px-5 flex flex-col justify-center h-full">
+        <div name="no-picks" className='w-full h-screen bg-[#141d2b] text-white'>
+          <div className="mx-auto px-5 flex flex-col justify-center h-full">
             <h1 className="animate-text pb-3 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-4xl text-center">
               You don't have any movies here yet
             </h1>
