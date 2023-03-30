@@ -22,7 +22,7 @@ export function MovieList({ movies }) {
 
   return (
     <div name="picks" className='w-full md:h-screen bg-[#141d2b] text-white'>
-      {shortList.length > 0 ? (
+      {shortList && shortList.length > 0 ? (
         <>
           <h1 className="animate-text pt-24 pb-3 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-4xl text-center">
             Here are your picked movies :
