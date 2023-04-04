@@ -8,6 +8,13 @@ As a user, you visit the site and choose to search for movies by selecting betwe
 Once you search by your choice(s) you are shown a list of movie options one by one. Just like with Tinder, you can swipe left to get rid of the choice or swipe right to keep your movie choice.
 The movies you have swiped right on are kept in a shortlist so you can review them.
 
+## Screenshots
+
+<img src = "src/images/home-preview.png">
+<img src = "src/images/form-preview.png">
+<img src = "src/images/swipe-preview.png">
+<img src = "src/images/movies-preview.png">
+
 ## Links
 Link to app:
 
@@ -29,7 +36,6 @@ Source Code:
 - [Technologies](#technologies)
 - [License](#License)
 - [Tests](#Tests)
-- [Screenshots](#Screenshots)
 - [External Resources](#external-resources)
 - [Questions](#questions)
 
@@ -61,13 +67,6 @@ This website uses React, Tailwind CSS, local storage.
 ## Tests
 
 We have tested this through deploying it on Netlify and through compiling it through React.
-
-## Screenshots
-
-<img src = "src/images/home-preview.png">
-<img src = "src/images/form-preview.png">
-<img src = "src/images/swipe-preview.png">
-<img src = "src/images/movies-preview.png">
 
 ## External Resources
 
